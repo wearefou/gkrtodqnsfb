@@ -52,14 +52,14 @@ if uploaded_file is not None:
 
 
     if prediction == labels[0]:
-        st.markdown("<h3>위 사진은 이 중학생입니다:</h3>", unsafe_allow_html=True)
-        st.write("중학생")
-    elif prediction == labels[1]:
         st.markdown("<h3>위 사진은 이 고등학생입니다:</h3>", unsafe_allow_html=True)
         st.write("고등학생")
-    elif prediction == labels[2]:
+    elif prediction == labels[1]:
         st.markdown("<h3>위 사진은 이 대학생입니다:</h3>", unsafe_allow_html=True)
         st.write("대학생")
+    elif prediction == labels[2]:
+        st.markdown("<h3>위 사진은 이 중학생입니다:</h3>", unsafe_allow_html=True)
+        st.write("중학생")
 
     for label, prob in zip(labels, probs):
         # HTML 및 CSS로 확률을 시각화
